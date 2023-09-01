@@ -20,7 +20,7 @@ export default function HeaderSigninButton() {
             );
           }
 
-          return signIn('google');
+          return signIn();
         }}
       >
         {session ? (
