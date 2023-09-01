@@ -1,6 +1,6 @@
 'use client';
 
-import { signIn, useSession } from 'next-auth/react';
+import { signIn, signOut, useSession } from 'next-auth/react';
 import Image from 'next/image';
 import React, { useState } from 'react';
 
@@ -15,9 +15,7 @@ export default function HeaderSigninButton() {
         className="p-3 bg-white mr-14 shadow-md rounded-full hover:scale-110 duration-300"
         onClick={() => {
           if (session) {
-            return setIsShowingProfileInfo(
-              (prevIsShowingProfileInfo) => !prevIsShowingProfileInfo
-            );
+            return signOut();
           }
 
           return signIn();
