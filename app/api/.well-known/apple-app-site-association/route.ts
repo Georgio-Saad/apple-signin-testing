@@ -14,6 +14,7 @@ const association = {
     ],
   },
 };
+
 export default (_: NextApiRequest, response: NextApiResponse) => {
   return response.status(200).send(association);
 };

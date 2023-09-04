@@ -3,8 +3,8 @@ const nextConfig = {
   async redirects() {
     return [
       {
-        source: '/.well-known/:file',
-        destination: '/api/.well-known/:file',
+        source: '/.well-known/apple-app-site-association/:file',
+        destination: '/api/.well-known/apple-app-site-association/:file',
         permanent: false,
       },
     ];
